@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package cafe.management.system;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.*;
@@ -127,7 +124,7 @@ public class VerifyUsers extends javax.swing.JFrame {
 
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
         // TODO add your handling code here:
-        getAllRecords(" ");
+        getAllRecords("");
         
     }//GEN-LAST:event_formComponentShown
 

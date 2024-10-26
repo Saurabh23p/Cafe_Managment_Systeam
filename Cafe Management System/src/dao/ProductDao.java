@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package dao;
+import cafe.management.system.ChangePassword;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import model.Product;

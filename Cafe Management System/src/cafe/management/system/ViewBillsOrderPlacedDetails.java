@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package cafe.management.system;
 
 import common.OpenPdf;
@@ -25,6 +22,7 @@ public class ViewBillsOrderPlacedDetails extends javax.swing.JFrame {
      */
     public ViewBillsOrderPlacedDetails() {
         initComponents();
+         System.out.println("ViewBillsOrderPlacedDetails");
         SimpleDateFormat dFormat = new SimpleDateFormat("dd-MM-yyyy");
         Date date = new Date();
         String todayDate = dFormat.format(date);
@@ -160,16 +158,19 @@ public class ViewBillsOrderPlacedDetails extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        setVisible(false);
+        setVisible(false); 
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
+        System.out.println("jComboBox1ActionPerformed");
         tableDetails();
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
         // TODO add your handling code here:
+        System.out.println("jTextField1KeyReleased");
         tableDetails();
     }//GEN-LAST:event_jTextField1KeyReleased
 
@@ -189,6 +190,7 @@ public class ViewBillsOrderPlacedDetails extends javax.swing.JFrame {
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
+        tableDetails();
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**

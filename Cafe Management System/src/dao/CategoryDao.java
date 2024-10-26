@@ -4,6 +4,7 @@
  */
 package dao;
 
+import cafe.management.system.ChangePassword;
 import model.Category;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -24,6 +25,7 @@ public class CategoryDao {
         ArrayList<Category> arrayList = new ArrayList<>();
         try {
             ResultSet rs = DbOperations.getdata("select * from category");
+          
             while (rs.next()) {
                 Category category = new Category();
                 category.setId(rs.getInt("id"));

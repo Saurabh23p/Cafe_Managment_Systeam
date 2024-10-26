@@ -4,6 +4,7 @@
  */
 package dao;
 
+import com.mysql.cj.util.StringUtils;
 import javax.swing.JOptionPane;
 import java.sql.*;
 import java.util.ArrayList;
@@ -38,7 +39,14 @@ public class BillDao {
     public static ArrayList<Bill> getAllRecordsByInc(String date) {
         ArrayList<Bill> arrayList = new ArrayList<>();
         try {
-            ResultSet rs = DbOperations.getdata("select * from bill where date like '% "+ date +" %'");
+            String query;
+            if(StringUtils.isNullOrEmpty(date)){
+                  query="select * from bill";
+         }else{
+                    query="select * from bill where date='"+date+"'";
+            }
+            System.out.println("dao.BillDao.getAllRecordsByInc()"+query);
+            ResultSet rs = DbOperations.getdata(query);
             while (rs.next()) {
                 Bill bill = new Bill();
                 bill.setId(rs.getInt("id"));
@@ -60,7 +68,13 @@ public class BillDao {
     public static ArrayList<Bill> getAllRecordsByDesc(String date) {
         ArrayList<Bill> arrayList = new ArrayList<>();
         try {
-            ResultSet rs = DbOperations.getdata("select * from bill where date like '% "+date+" %' order By id DESC");
+             String query;
+            if(StringUtils.isNullOrEmpty(date)){
+                  query="select * from bill order By id DESC";
+         }else{
+                    query="select * from bill where date='"+date+"' order By id DESC";
+                            }
+            ResultSet rs = DbOperations.getdata(query);
             while (rs.next()) {
                 Bill bill = new Bill();
                 bill.setId(rs.getInt("id"));
